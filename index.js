@@ -102,16 +102,24 @@ document.getElementById('salvar').onclick = function (){
 window.onload = function(){
     maverick.atualiza()
 }
-// tratamos a alteração do campo utilizado
-document.getElementById('saida').onchange = function (){
-    let entrada = document.getElementById ('entrada').value
-    let saida = document.getElementById ('saida').value
-    let pista = (saida - entrada) 
-   document.getElementById('pista').value = pista.toFixed(2)
-}
-document.getElementById('pista').onchange = function (){
-    let tempo = document.getElementById ('tempo').value
-    let pista = document.getElementById ('pista').value
-    let credito = (pista - tempo) 
-   document.getElementById('credito').value = credito.toFixed(2)
+document.getElementById('saida').onchange = function () {
+    let horaPista = 0
+    let minutoPista = 0
+    let entrada = document.getElementById('entrada').value
+    let saida = document.getElementById('saida').value
+    //Saiba mais sobre o split - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split    
+    //Efetua o split no campo entrada
+    var time1 = entrada.split(":");
+    //Efetua o split no campo saida
+    var time2 = saida.split(":");
+    //Obtendo o tempo em minutos
+    var min1 = time1[0] * 60 + time1[1] * 1
+    var min2 = time2[0] * 60 + time2[1] * 1
+    //Separando a hora e os minutos
+    horaPista = parseInt(((min2 - min1) / 60))
+    minutoPista = ((min2 - min1) - (horaPista * 60))
+    //Convertendo em texto com zero a esquerda
+    const horaPistaTexto = horaPista.toString().padStart(2,'0')
+    const minutoPistaTexto = minutoPista.toString().padStart(2,'0')
+    document.getElementById('pista').value = horaPistaTexto+':'+minutoPistaTexto
 }
