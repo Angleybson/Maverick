@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.menu {
+    background-color: #5F5F5F;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.menu a{
+    float: left;
+    color: #F1F1F1;
+    text-align: center;
+    padding: 10px;
+    font-size: 17px;
+    text-decoration: none;
+}
+.menu a:hover{
+    background-color: #dddddd;
+    color: black;
+}
+.menu a.ativo{
+    background-color: #4CAF50;
+    color: white;
+}
+.form{
+    background-color:rgb(255, 166, 0);
+    color: #F1F1F1;
+}    
+
+.form-group{
+    display: flex;
+    flex-direction: row;
+
+}
+.form-group label{
+    flex: none;
+    display: block;
+    width: 100px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.form-group label.right-inline{
+    text-align: right;
+    padding-right: 8px;
+    padding-left: 10px;
+    width: auto;
+}
+.form-group .input-control{
+    display: block;
+    margin-bottom: 10px;
+    margin-right: 8px;
+    padding: 4px;
+    flex: 1 1 auto;
+}
+button{
+    color:white;
+    background-color:rgb(175, 128, 39);
+    font-size: 15px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+    min-width: 100px;
+}
+
+/* Estilo da Tabela obtido em divtable.com/table-styler */
+
+table.paleBlueRows {
+    border: 1px solid #FFFFFF;
+    width: 100%; /* alterado manualmente*/
+    height: 100px; /* alterado manualmente*/
+    text-align: center;
+    border-collapse: collapse;
+  }
+  table.paleBlueRows td, table.paleBlueRows th {
+    border: 1px solid #FFFFFF;
+    padding: 3px 2px;
+  }
+  table.paleBlueRows tbody td {
+    font-size: 13px;
+  }
+  table.paleBlueRows tr:nth-child(even) {
+    background: orange;
+  }
+  table.paleBlueRows thead {
+    background: orange;
+    border-bottom: 5px solid #FFFFFF;
+  }
+  table.paleBlueRows thead th {
+    font-size: 17px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    border-left: 2px solid #FFFFFF;
+  }
+  table.paleBlueRows thead th:first-child {
+    border-left: none;
+  }
+  
+  table.paleBlueRows tfoot {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+    background: #D0E4F5;
+    border-top: 3px solid #444444;
+  }
+  table.paleBlueRows tfoot td {
+    font-size: 14px;
+  }

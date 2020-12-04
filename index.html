@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maverick karting team </title>
+    <link href="estilo.css" rel="stylesheet" />
+</head>
+<body>
+
+    </div>
+    <div class="form">
+        <form name="frmkart">
+            <fieldset>
+                <legend>Controle de tempo</legend>
+            
+
+                <div class="form-group">
+                    <label>Kart: </label>
+                    <input class="input-control" type="number" size="10" id="kart" />
+
+                    <label class="right-inline">Parada: </label>
+                    <input class="input-control" type="number" size="10" id="parada" />
+
+                
+                    <label class="right-inline">Piloto: </label>
+                    <input class="input-control" type="text" size="100" id="piloto" />
+
+                   
+                </div>
+                <div class="form-group">
+                    <label>Observações</label>
+                    <textarea class="input-control" id="observacoes"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>H/entrada:</label> 
+                    <input class="input-control" type="time" size="5" id="entrada"/>
+
+                    
+                    <label class="right-inline">H/saida:</label>
+                    <input class="input-control" type="time" size="5" id="saida"/>
+
+                    
+                    <label class="right-inline">Tempo na pista:</label>
+                    <input class="input-control" type="time" size="10" id="pista"/>
+
+
+                    <label class="right-inline">Tempo minímo:</label>
+                    <input class="input-control" type="time" size="10" id="tempo"/>
+
+            
+                    <label class="right-inline">Crédito: </label>
+                    <input class="input-control" type="time" size="10" id="credito" disabled />
+                     
+                
+                </div>
+                <div class="form-group">
+                    <label></label>
+                    <button id="salvar">💾 Salvar</button>
+                    <button id="cancelar">❌ Cancelar</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div id="listagem"></div>
+   <script src="index.js"></script> 
+</body>
+</html>
